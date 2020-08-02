@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: synapse-creator-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: synapse-creator
+          env:
+            - name: ENVIRONMENT
+              value: "development"

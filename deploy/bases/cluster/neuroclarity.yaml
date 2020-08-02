@@ -1,0 +1,32 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: nc-small
+  region: us-west-2
+
+vpc:
+  id: "vpc-09ec9171"
+  cidr: "172.31.0.0/16"
+  subnets:
+    public:
+      us-west-2a:
+        id: "subnet-4f927905"
+      us-west-2c:
+        id: "subnet-bf61b8e2"
+
+nodeGroups:
+  - name: nc-ng-1
+    instanceType: m5.2xlarge # vCPU=8 Mem=32Gib
+    desiredCapacity: 1
+    securityGroups:
+      withShared: true
+      withLocal: true
+      attachIDs: ["sg-001adc687ad571938"]
+    availabilityZones: ["us-west-2c"]
+
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["all"]
+    # all supported types: "api", "audit", "authenticator", "controllerManager", "scheduler"
+    # supported special values: "*" and "all"

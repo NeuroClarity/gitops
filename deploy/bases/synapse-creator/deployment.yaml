@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: synapse-creator-deployment
+spec:
+  selector:
+    matchLabels:
+      app: synapse-creator
+  template:
+    metadata:
+      labels:
+        app: synapse-creator
+    spec:
+      containers:
+        - name: synapse-creator
+          image: synapse-creator
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: synapse-creator-aws-credentials
