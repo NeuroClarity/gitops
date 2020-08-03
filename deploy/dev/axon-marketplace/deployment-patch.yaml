@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: axon-marketplace-deployment
 spec:
+  replicas: 3
   template:
     spec:
       containers:

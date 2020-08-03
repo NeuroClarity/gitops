@@ -7,6 +7,6 @@ spec:
     app: synapse-creator
   ports:
     - name: https
-      port: 80
+      port: 443
       targetPort: 80
   type: LoadBalancer
