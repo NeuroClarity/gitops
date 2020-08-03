@@ -4,3 +4,5 @@ kind: Kustomization
 resources:
   - synapse-creator/deployment.yaml
   - synapse-creator/service.yaml
+  - axon-marketplace/deployment.yaml
+  - axon-marketplace/service.yaml

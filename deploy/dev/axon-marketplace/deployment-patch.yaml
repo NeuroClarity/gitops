@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: axon-marketplace-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: axon-marketplace
+          env:
+            - name: ENVIRONMENT
+              value: "development"

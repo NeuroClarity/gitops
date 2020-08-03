@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: axon-marketplace-deployment
+spec:
+  selector:
+    matchLabels:
+      app: axon-marketplace
+  template:
+    metadata:
+      labels:
+        app: axon-marketplace
+    spec:
+      containers:
+        - name: axon-marketplace
+          image: axon-marketplace
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"
+          ports:
+            - containerPort: 8000
+      imagePullSecrets:
+        - name: axon-marketplace-aws-credentials

@@ -4,12 +4,18 @@ kind: Kustomization
 patchesStrategicMerge:
   - synapse-creator/deployment-patch.yaml
   - synapse-creator/service-patch.yaml
+  - axon-marketplace/deployment-patch.yaml
+  - axon-marketplace/service-patch.yaml
 
 images:
   - name: synapse-creator
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/synapse-creator
-    newTag: "45aecfe"
+    newTag: "5a185b4"
+  - name: axon-marketplace
+    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
+    newTag: "43132a8"
 
+namespace: dev
 namePrefix: dev-
 
 resources:
