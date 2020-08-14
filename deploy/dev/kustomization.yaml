@@ -6,6 +6,8 @@ patchesStrategicMerge:
   - synapse-creator/service-patch.yaml
   - axon-marketplace/deployment-patch.yaml
   - axon-marketplace/service-patch.yaml
+  - landing/deployment-patch.yaml
+  - landing/service-patch.yaml
 
 images:
   - name: synapse-creator
@@ -14,6 +16,9 @@ images:
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
     newTag: "9dc19b4"
+  - name: landing
+    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
+    newTag: "7a6eff4"
 
 namespace: dev
 namePrefix: dev-

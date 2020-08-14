@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landing-deployment
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: landing
+          env:
+            - name: ENVIRONMENT
+              value: "development"

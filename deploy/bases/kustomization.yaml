@@ -6,3 +6,5 @@ resources:
   - synapse-creator/service.yaml
   - axon-marketplace/deployment.yaml
   - axon-marketplace/service.yaml
+  - landing/deployment.yaml
+  - landing/service.yaml
