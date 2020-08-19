@@ -12,7 +12,7 @@ patchesStrategicMerge:
 images:
   - name: synapse-creator
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/synapse-creator
-    newTag: "1e31e1e"
+    newTag: "2282e03"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
     newTag: "9dc19b4"
