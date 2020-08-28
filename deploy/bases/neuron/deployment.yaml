@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neuron-deployment
+spec:
+  selector:
+    matchLabels:
+      app: neuron
+  template:
+    metadata:
+      labels:
+        app: neuron
+    spec:
+      containers:
+        - name: neuron
+          image: neuron
+          resources:
+            requests:
+              cpu: "1Gib"
+              memory: "1"
+            limits:
+              cpu: "2Gib"
+              memory: "1.5"
+          ports:
+            - containerPort: 5000
+      imagePullSecrets:
+        - name: neuron-aws-credentials
