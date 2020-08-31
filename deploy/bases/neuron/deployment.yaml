@@ -16,12 +16,10 @@ spec:
           image: neuron
           resources:
             requests:
-              cpu: "1Gib"
-              memory: "1"
+              cpu: "500m"
+              memory: "1Gi"
             limits:
-              cpu: "2Gib"
-              memory: "1.5"
+              cpu: "500m"
+              memory: "2Gi"
           ports:
             - containerPort: 5000
-      imagePullSecrets:
-        - name: neuron-aws-credentials
