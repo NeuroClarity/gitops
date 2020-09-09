@@ -29,6 +29,14 @@ nodeGroups:
       withLocal: true
       attachIDs: ["sg-001adc687ad571938"]
     availabilityZones: ["us-west-2a", "us-west-2b"]
+  - name: nc-ml
+    instanceType: t3.xlarge
+    desiredCapacity: 1
+    securityGroups:
+      withShared: true
+      withLocal: true
+      attachIDs: ["sg-001adc687ad571938"]
+    availabilityZones: ["us-west-2a", "us-west-2b"]
 
 cloudWatch:
   clusterLogging:

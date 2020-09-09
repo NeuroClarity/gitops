@@ -16,10 +16,10 @@ spec:
           image: neuron
           resources:
             requests:
-              cpu: "500m"
-              memory: "1Gi"
+              cpu: "4"
+              memory: "4Gi"
             limits:
-              cpu: "500m"
-              memory: "2Gi"
+              cpu: "4"
+              memory: "6Gi"
           ports:
             - containerPort: 5000

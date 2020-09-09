@@ -6,8 +6,8 @@ patchesStrategicMerge:
   - synapse-argon/service-patch.yaml
   - axon-marketplace/deployment-patch.yaml
   - axon-marketplace/service-patch.yaml
-  - neuron/deployment-patch.yaml
-  - neuron/service-patch.yaml
+  # - neuron/deployment-patch.yaml
+  # - neuron/service-patch.yaml
   - landing/deployment-patch.yaml
   - landing/service-patch.yaml
 
