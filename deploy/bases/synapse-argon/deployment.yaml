@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: synapse-creator-deployment
+  name: synapse-argon-deployment
 spec:
   selector:
     matchLabels:
-      app: synapse-creator
+      app: synapse-argon
   template:
     metadata:
       labels:
-        app: synapse-creator
+        app: synapse-argon
     spec:
       containers:
-        - name: synapse-creator
-          image: synapse-creator
+        - name: synapse-argon
+          image: synapse-argon
           resources:
             requests:
               cpu: "100m"
@@ -24,4 +24,4 @@ spec:
           ports:
             - containerPort: 80
       imagePullSecrets:
-        - name: synapse-creator-aws-credentials
+        - name: synapse-argon-aws-credentials

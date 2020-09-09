@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: landing-deployment
+  name: synapse-argon-deployment
 spec:
-  replicas: 1
+  replicas: 2
   template:
     spec:
       containers:
-        - name: landing
+        - name: synapse-argon
           env:
             - name: ENVIRONMENT
-              value: "development"
+              value: "production"

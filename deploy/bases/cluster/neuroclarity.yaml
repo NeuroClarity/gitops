@@ -12,18 +12,23 @@ vpc:
     public:
       us-west-2a:
         id: "subnet-4f927905"
+      us-west-2b:
+        id: "subnet-2a10de52"
+    private:
       us-west-2c:
         id: "subnet-bf61b8e2"
+      us-west-2d:
+        id: "subnet-825909a9"
 
 nodeGroups:
   - name: nc-ng-1
     instanceType: t3.medium # vCPU=2 Mem=4Gib
-    desiredCapacity: 1
+    desiredCapacity: 4
     securityGroups:
       withShared: true
       withLocal: true
       attachIDs: ["sg-001adc687ad571938"]
-    availabilityZones: ["us-west-2c"]
+    availabilityZones: ["us-west-2a", "us-west-2b"]
 
 cloudWatch:
   clusterLogging:

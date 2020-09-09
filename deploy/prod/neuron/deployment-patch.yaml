@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: landing-deployment
+  name: neuron-deployment
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: landing
+        - name: neuron
           env:
             - name: ENVIRONMENT
-              value: "development"
+              value: "production"

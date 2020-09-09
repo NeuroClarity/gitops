@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: synapse-creator-deployment
+  name: synapse-argon-deployment
 spec:
-  replicas: 2
+  replicas: 1
   template:
     spec:
       containers:
-        - name: synapse-creator
+        - name: synapse-argon
           env:
             - name: ENVIRONMENT
               value: "development"
