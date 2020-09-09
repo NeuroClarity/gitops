@@ -20,7 +20,7 @@ images:
     newTag: "1af8ebf"
   - name: neuron
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/neuron
-    newTag: "11e8c76"
+    newTag: "fc3116c"
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
     newTag: "6a2a95f"
