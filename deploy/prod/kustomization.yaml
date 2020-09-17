@@ -14,7 +14,7 @@ patchesStrategicMerge:
 images:
   - name: synapse-argon
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/synapse-argon
-    newTag: "9176e12"
+    newTag: "46e06c3"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
     newTag: "85aeee8"
