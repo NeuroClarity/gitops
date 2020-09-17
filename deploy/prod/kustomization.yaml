@@ -17,7 +17,7 @@ images:
     newTag: "9176e12"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
-    newTag: "feaaec4"
+    newTag: "85aeee8"
   - name: neuron
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/neuron
     newTag: "fc3116c"
