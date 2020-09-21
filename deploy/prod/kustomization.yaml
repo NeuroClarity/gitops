@@ -17,10 +17,10 @@ images:
     newTag: "46e06c3"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
-    newTag: "85aeee8"
+    newTag: "0283697"
   - name: neuron
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/neuron
-    newTag: "fc3116c"
+    newTag: "171bc50"
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
     newTag: "6a2a95f"
