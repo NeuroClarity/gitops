@@ -23,7 +23,7 @@ images:
     newTag: "121899c"
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
-    newTag: "9c36ac4"
+    newTag: "d3904b2"
 
 namespace: prod
 namePrefix: prod-
