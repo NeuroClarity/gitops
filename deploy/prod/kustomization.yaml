@@ -17,7 +17,7 @@ images:
     newTag: "9daa7d0"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
-    newTag: "0756df6"
+    newTag: "9feb8a4"
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
     newTag: "fb5d7e1"
