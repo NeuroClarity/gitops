@@ -14,13 +14,13 @@ patchesStrategicMerge:
 images:
   - name: synapse-argon
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/synapse-argon
-    newTag: "62f7e64"
+    newTag: "1aded5b"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
-    newTag: "99384a5"
+    newTag: "b08ed92"
   - name: neuron
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/neuron
-    newTag: "121899c"
+    newTag: "7081d8f"
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
     newTag: "2835a98"

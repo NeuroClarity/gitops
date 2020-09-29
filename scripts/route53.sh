@@ -53,23 +53,23 @@ echo -e "Hosted Zone: \n\t'$LB_HOSTED_ZONE'\n"
 TIME_STAMP=`date -u +%Y%m%d_%H%M%S`
 CHANGE_COMMENT="User '$USER' updated at UTC time: $TIME_STAMP"
 
-# aws route53 change-resource-record-sets --hosted-zone-id "${HOSTED_ZONE}" \
-#   --change-batch '{
-#   "Comment": "'"$CHANGE_COMMENT"'",
-#   "Changes": [
-#     {
-#       "Action": "UPSERT",
-#       "ResourceRecordSet": {
-#         "Name": "'${DNS_NAME}'.",
-#         "Type": "A",
-#         "AliasTarget": {
-#           "HostedZoneId": "'${LB_HOSTED_ZONE}'",
-#           "DNSName": "dualstack.'${AWS_DNS_NAME}'",
-#           "EvaluateTargetHealth": false
-#         }
-#       }
-#     }
-#   ]
-# }'
+aws route53 change-resource-record-sets --hosted-zone-id "${HOSTED_ZONE}" \
+  --change-batch '{
+  "Comment": "'"$CHANGE_COMMENT"'",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "'${DNS_NAME}'.",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "'${LB_HOSTED_ZONE}'",
+          "DNSName": "dualstack.'${AWS_DNS_NAME}'",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}'
 
 
