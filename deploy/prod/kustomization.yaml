@@ -6,24 +6,24 @@ patchesStrategicMerge:
   - synapse-argon/service-patch.yaml
   - axon-marketplace/deployment-patch.yaml
   - axon-marketplace/service-patch.yaml
-  - neuron/deployment-patch.yaml
-  - neuron/service-patch.yaml
   - landing/deployment-patch.yaml
   - landing/service-patch.yaml
+  - neuron/deployment-patch.yaml
+  - neuron/service-patch.yaml
 
 images:
   - name: synapse-argon
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/synapse-argon
-    newTag: "1aded5b"
+    newTag: "9df2ae2"
   - name: axon-marketplace
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
-    newTag: "b08ed92"
+    newTag: "624b3c4"
+  - name: landing
+    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
+    newTag: "b1cfd45"
   - name: neuron
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/neuron
     newTag: "7081d8f"
-  - name: landing
-    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
-    newTag: "2835a98"
 
 namespace: prod
 namePrefix: prod-
