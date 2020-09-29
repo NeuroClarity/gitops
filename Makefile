@@ -12,16 +12,32 @@ endif
 
 HOSTED_ZONE=Z00792213KSNXYOGBGHZV
 
-LANDING_DNS_NAME=$(ENV).neuroclarity.ai
+ifeq ($(ENV), dev)
+	LANDING_DNS_NAME=dev.neuroclarity.ai
+else
+	LANDING_DNS_NAME=neuroclarity.ai
+endif
 LANDING_KUB_SVC=$(ENV)-landing-service
 
-SYNAPSE_DNS_NAME=synapse.$(ENV).neuroclarity.ai
-SYNAPSE_KUB_SVC=$(ENV)-syanpse-argon-service
+ifeq ($(ENV), dev)
+	SYNAPSE_DNS_NAME=beta.$(ENV).neuroclarity.ai
+else
+	SYNAPSE_DNS_NAME=beta.neuroclarity.ai
+endif
+SYNAPSE_KUB_SVC=$(ENV)-synapse-argon-service
 
-AXON_DNS_NAME=axon.$(ENV).neuroclarity.ai
+ifeq ($(ENV), dev)
+	AXON_DNS_NAME=axon.$(ENV).neuroclarity.ai
+else
+	AXON_DNS_NAME=axon.neuroclarity.ai
+endif
 AXON_KUB_SVC=$(ENV)-axon-marketplace-service
 
-NEURON_DNS_NAME=neuron.$(ENV).neuroclarity.ai
+ifeq ($(ENV), dev)
+	NEURON_DNS_NAME=neuron.$(ENV).neuroclarity.ai
+else
+	NEURON_DNS_NAME=neuron.neuroclarity.ai
+endif
 NEURON_KUB_SVC=$(ENV)-neuron-service
 
 .PHONY: get-logs
@@ -93,3 +109,6 @@ update-neuron-alias-records: check-env
 	DNS_NAME="$(NEURON_DNS_NAME)" \
 	ENV="$(ENV)" \
 	./scripts/route53.sh
+
+.PHONY: update-all-alias-records
+update-all-alias-records: update-landing-alias-records update-synapse-alias-records update-axon-alias-records update-neuron-alias-records

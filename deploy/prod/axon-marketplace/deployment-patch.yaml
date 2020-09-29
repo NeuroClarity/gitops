@@ -6,6 +6,8 @@ spec:
   replicas: 2
   template:
     spec:
+      nodeSelector:
+        alpha.eksctl.io/nodegroup-name: nc-main
       containers:
         - name: axon-marketplace
           env:
