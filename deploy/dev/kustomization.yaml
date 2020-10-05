@@ -18,7 +18,7 @@ images:
     newTag: "593d2fd"
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
-    newTag: "fb5d7e1"
+    newTag: "d276f62"
 
 namespace: dev
 namePrefix: dev-

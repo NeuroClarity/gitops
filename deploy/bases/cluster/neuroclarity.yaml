@@ -30,7 +30,7 @@ nodeGroups:
       attachIDs: ["sg-001adc687ad571938"]
     availabilityZones: ["us-west-2a", "us-west-2b"]
   - name: nc-ml
-    instanceType: c4.2xlarge #CPU=8 Mem=16Gib
+    instanceType: r5a.xlarge
     desiredCapacity: 1
     securityGroups:
       withShared: true
