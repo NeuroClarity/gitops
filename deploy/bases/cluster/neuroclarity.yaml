@@ -21,16 +21,8 @@ vpc:
         id: "subnet-825909a9"
 
 nodeGroups:
-  - name: nc-main
+  - name: nc-mini
     instanceType: t3.medium # vCPU=2 Mem=4Gib
-    desiredCapacity: 6
-    securityGroups:
-      withShared: true
-      withLocal: true
-      attachIDs: ["sg-001adc687ad571938"]
-    availabilityZones: ["us-west-2a", "us-west-2b"]
-  - name: nc-ml
-    instanceType: r5a.xlarge
     desiredCapacity: 1
     securityGroups:
       withShared: true

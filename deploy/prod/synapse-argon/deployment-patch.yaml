@@ -3,11 +3,11 @@ kind: Deployment
 metadata:
   name: synapse-argon-deployment
 spec:
-  replicas: 2
+  replicas: 1
   template:
     spec:
       nodeSelector:
-        alpha.eksctl.io/nodegroup-name: nc-main
+        alpha.eksctl.io/nodegroup-name: nc-mini
       containers:
         - name: synapse-argon
           env:

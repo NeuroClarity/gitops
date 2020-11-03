@@ -8,8 +8,6 @@ patchesStrategicMerge:
   - axon-marketplace/service-patch.yaml
   - landing/deployment-patch.yaml
   - landing/service-patch.yaml
-  - neuron/deployment-patch.yaml
-  - neuron/service-patch.yaml
 
 images:
   - name: synapse-argon
@@ -21,9 +19,6 @@ images:
   - name: landing
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
     newTag: "dc03c87"
-  - name: neuron
-    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/neuron
-    newTag: "7081d8f"
 
 namespace: prod
 namePrefix: prod-

@@ -4,21 +4,11 @@ kind: Kustomization
 patchesStrategicMerge:
   - synapse-argon/deployment-patch.yaml
   - synapse-argon/service-patch.yaml
-  - axon-marketplace/deployment-patch.yaml
-  - axon-marketplace/service-patch.yaml
-  - landing/deployment-patch.yaml
-  - landing/service-patch.yaml
 
 images:
   - name: synapse-argon
     newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/synapse-argon
     newTag: "6f428ca"
-  - name: axon-marketplace
-    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/axon-marketplace
-    newTag: "593d2fd"
-  - name: landing
-    newName: 471943556279.dkr.ecr.us-west-2.amazonaws.com/landing
-    newTag: "dc03c87"
 
 namespace: dev
 namePrefix: dev-
